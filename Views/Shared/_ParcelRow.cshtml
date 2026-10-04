@@ -1,0 +1,15 @@
+@model Parcel
+
+<div class="parcel-row">
+    <span>@Model.TrackingNumber</span>
+    <span>@Model.Recipient</span>
+
+    @if (Model.IsDelivered)
+    {
+        <strong>@Model.Status</strong>
+    }
+    else
+    {
+        <span>@Model.Status</span>
+    }
+</div>

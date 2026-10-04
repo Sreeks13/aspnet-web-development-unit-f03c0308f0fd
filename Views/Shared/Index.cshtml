@@ -1,0 +1,14 @@
+@model List<Parcel>
+
+@{
+    ViewData["Title"] = "Parcel Tracking";
+}
+
+<h1>Parcel Tracking</h1>
+
+<div>
+    @foreach (var parcel in Model)
+    {
+        <partial name="_ParcelRow" model="parcel" />
+    }
+</div>
